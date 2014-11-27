@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<info>
+   <id>menu_improver</id>
+   <name>menu_improver</name>
+   <description>Minimalistic app that replaces svg icons in the menu with font-awesome icons.</description>
+   <version>0.1</version>
+   <licence>AGPL</licence>
+   <author>Christian Brinch, DeIC (cbri@dtu.dk)</author>
+   <require>6</require>
+</info>
