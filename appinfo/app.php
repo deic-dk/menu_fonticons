@@ -1,6 +1,6 @@
 <?php 
 /*                                                                                                                                
- * ownCloud menu_improver app                                                                                                   
+ * ownCloud menu_fonticons app                                                                                                   
  *                                                                                                                                  
  * @author Christian Brinch                                                                                                           
  * @copyright 2014 Christian Brinch, DeIC.dk, cbri@dtu.dk   
@@ -20,19 +20,19 @@
  *                                                                                                                                  
  */  
 
-OCP\App::checkAppEnabled('menu_improver');
+OCP\App::checkAppEnabled('menu_fonticons');
 
   
-OCP\Util::addScript('menu_improver','script');
-OCP\Util::addStyle('menu_improver','style');
-OCP\Util::addStyle('menu_improver/3rdparty/font-awesome', 'font-awesome');
+OCP\Util::addScript('menu_fonticons','script');
+OCP\Util::addStyle('menu_fonticons','style');
+OCP\Util::addStyle('menu_fonticons/3rdparty/font-awesome', 'font-awesome');
 
 
 
 OCP\App::register(Array(                                                                                                           
     'order' => 400,                                                                                                                 
-    'id' => 'menu_improver',                                                                                                          
-    'name' => 'menu_improver'                                                                                                         
+    'id' => 'menu_fonticons',                                                                                                          
+    'name' => 'menu_fonticons'                                                                                                         
 ));  
 
 

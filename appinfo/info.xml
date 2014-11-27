@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <info>
-   <id>menu_improver</id>
-   <name>menu_improver</name>
+   <id>menu_fonticons</id>
+   <name>menu_fonticons</name>
    <description>Minimalistic app that replaces svg icons in the menu with font-awesome icons.</description>
    <version>0.1</version>
    <licence>AGPL</licence>
