@@ -21,7 +21,6 @@
  */  
 
 OCP\App::checkAppEnabled('menu_fonticons');
-
   
 OCP\Util::addScript('menu_fonticons','script');
 OCP\Util::addStyle('menu_fonticons','style');
