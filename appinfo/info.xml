@@ -3,7 +3,7 @@
    <id>menu_fonticons</id>
    <name>menu_fonticons</name>
    <description>Minimalistic app that replaces svg icons in the menu with font-awesome icons. This app only works in OwnCloud 6.</description>
-   <version>0.1</version>
+   <version>0.2</version>
    <licence>AGPL</licence>
    <author>Christian Brinch, DeIC (cbri@dtu.dk)</author>
    <require>6</require>

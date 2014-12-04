@@ -1,5 +1,5 @@
 /*                                                                                                                                
- * menu_improver
+ * menu_fonticons
  *                                                                                                                                  
  * @author Christian Brinch                                                                                                           
  * @copyright 2014 Christian Brinch, DeIC.dk                                                                                
