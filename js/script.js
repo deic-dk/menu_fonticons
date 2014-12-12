@@ -24,7 +24,7 @@ $(document).ready(function(){
     $('div.wrapper li[data-id="files_index"] > a img').replaceWith('<i class="fa fa-home deic_green icon"></i>');
     $('div.wrapper li[data-id="meta_data"] > a img').replaceWith('<i class="fa fa-tag deic_green icon"></i>');
     $('div.wrapper li[data-id="files_unsharing"] > a img').replaceWith('<i class="fa fa-share-alt deic_green icon"></i>');
-    $('div.wrapper li[data-id="user_groupadmin"] > a img').replaceWith('<i class="fa fa-users deic_green icon"></i>');
+    $('div.wrapper li[data-id="user_group_admin"] > a img').replaceWith('<i class="fa fa-users deic_green icon"></i>');
     $('div.wrapper li[data-id="gallery_index"] > a img').replaceWith('<i class="fa fa-camera deic_green icon"></i>');
     $('div.wrapper li[data-id="documents_index"] > a img').replaceWith('<i class="fa fa-file deic_green icon"></i>');
     $('div.wrapper li[data-id="importer_index"] > a img').replaceWith('<i class="fa fa-download deic_green icon"></i>');
