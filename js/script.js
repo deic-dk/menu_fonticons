@@ -21,16 +21,18 @@
 
 $(document).ready(function(){    
 
-    $('div.wrapper li[data-id="files_index"] > a img').replaceWith('<i class="fa fa-home deic_green icon"></i>');
-    $('div.wrapper li[data-id="meta_data"] > a img').replaceWith('<i class="fa fa-tag deic_green icon"></i>');
-    $('div.wrapper li[data-id="files_unsharing"] > a img').replaceWith('<i class="fa fa-share-alt deic_green icon"></i>');
-    $('div.wrapper li[data-id="user_group_admin"] > a img').replaceWith('<i class="fa fa-users deic_green icon"></i>');
-    $('div.wrapper li[data-id="gallery_index"] > a img').replaceWith('<i class="fa fa-camera deic_green icon"></i>');
-    $('div.wrapper li[data-id="documents_index"] > a img').replaceWith('<i class="fa fa-file deic_green icon"></i>');
-    $('div.wrapper li[data-id="importer_index"] > a img').replaceWith('<i class="fa fa-download deic_green icon"></i>');
-    $('div.wrapper li[data-id="uploader"] > a img').replaceWith('<i class="fa fa-upload deic_green icon"></i>');
-    $('div.wrapper li[data-id="activity"] > a img').replaceWith('<i class="fa fa-bolt deic_green icon"></i>');
-    $('div.wrapper li[data-id="user_appchooser"] > a img').replaceWith('<i class="fa fa-cogs deic_grey icon"></i>');
+    $('ul.nav-sidebar li[data-id="files_index"] > a img     ').replaceWith('<i class="icon-home      deic_green icon"></i>');
+    $('ul.nav-sidebar li[data-id="meta_data"] > a img       ').replaceWith('<i class="icon-tag       deic_green icon"></i>');
+    $('ul.nav-sidebar li[data-id="files_unsharing"] > a img ').replaceWith('<i class="icon-share-alt deic_green icon"></i>');
+    $('ul.nav-sidebar li[data-id="user_group_admin"] > a img').replaceWith('<i class="icon-users     deic_green icon"></i>');
+    $('ul.nav-sidebar li[data-id="gallery_index"] > a img   ').replaceWith('<i class="icon-camera    deic_green icon"></i>');
+    $('ul.nav-sidebar li[data-id="documents_index"] > a img ').replaceWith('<i class="icon-doc-text  deic_green icon"></i>');
+    $('ul.nav-sidebar li[data-id="importer_index"] > a img  ').replaceWith('<i class="icon-download  deic_green icon"></i>');
+    $('ul.nav-sidebar li[data-id="uploader"] > a img        ').replaceWith('<i class="icon-upload    deic_green icon"></i>');
+    $('ul.nav-sidebar li[data-id="activity"] > a img        ').replaceWith('<i class="icon-flash     deic_green icon"></i>');
+    $('ul.nav-sidebar li[data-id="calendar_index"] > a img  ').replaceWith('<i class="icon-calendar  deic_green icon"></i>');
+    $('ul.nav-sidebar li[data-id="contacts"] > a img        ').replaceWith('<i class="icon-chat      deic_green icon"></i>');
+    $('ul.nav-sidebar li#apps-management > a img            ').replaceWith('<i class="icon-plus      deic_grey  icon"></i>');
 
 
 });

@@ -1,18 +1,17 @@
 
 .deic_green {
-  color: #84A000;
+  color: #B5CC2D;
 }
 
 .deic_grey {
   color: #999999;
 }
 
-#navigation li i.fa {
-  font-size: large;
+.nav-sidebar li i.icon {
   margin-right: 10px;
 }
 
-li[data-id="files_index"] a img {
+ul.nav-sidebar li a img {
   display:none;
 }
 
