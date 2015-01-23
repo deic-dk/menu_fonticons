@@ -27,10 +27,3 @@ OCP\Util::addStyle('menu_fonticons','style');
 
 
 
-OCP\App::register(Array(                                                                                                           
-    'order' => 400,                                                                                                                 
-    'id' => 'menu_fonticons',                                                                                                          
-    'name' => 'menu_fonticons'                                                                                                         
-));  
-
-

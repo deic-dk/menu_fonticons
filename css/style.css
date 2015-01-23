@@ -1,17 +1,21 @@
 
 .deic_green {
-  color: #B5CC2D;
+		color: #B5CC2D;
 }
 
 .deic_grey {
-  color: #999999;
+		color: #999999;
 }
 
 .nav-sidebar li i.icon {
-  margin-right: 10px;
+		margin-right: 10px;
 }
 
 ul.nav-sidebar li a img {
-  display:none;
+		display:none;
+}
+
+.icon-home {
+		background-image: none;
 }
 
