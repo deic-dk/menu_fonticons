@@ -23,7 +23,7 @@ $(document).ready(function(){
 
     $('ul.nav-sidebar li[data-id="files_index"] > a img     ').replaceWith('<i class="icon-home      deic_green icon"></i>');
     $('ul.nav-sidebar li[data-id="meta_data"] > a img       ').replaceWith('<i class="icon-tag       deic_green icon"></i>');
-    $('ul.nav-sidebar li[data-id="files_unsharing"] > a img ').replaceWith('<i class="icon-share-alt deic_green icon"></i>');
+    $('ul.nav-sidebar li[data-id="files_unsharing"] > a img ').replaceWith('<i class="icon-share     deic_green icon"></i>');
     $('ul.nav-sidebar li[data-id="user_group_admin"] > a img').replaceWith('<i class="icon-users     deic_green icon"></i>');
     $('ul.nav-sidebar li[data-id="gallery_index"] > a img   ').replaceWith('<i class="icon-camera    deic_green icon"></i>');
     $('ul.nav-sidebar li[data-id="documents_index"] > a img ').replaceWith('<i class="icon-doc-text  deic_green icon"></i>');
