@@ -1,10 +1,58 @@
+ul.nav-sidebar {
+  display:none;
+}
+
 
 .deic_green {
 		color: #B5CC2D;
 }
 
+.deic_blue {
+		color: #006b93;
+}
+
+
 .deic_grey {
 		color: #999999;
+}
+
+
+
+.nav-sidebar > li:not(.head) {
+	margin-left: 20px;
+}
+
+
+.nav-sidebar #app-navigation {
+	float:none;
+	width: auto;
+	padding-bottom: 0px;
+}
+
+
+.nav-sidebar #app-navigation ul {
+	border: none;
+}
+
+.nav-sidebar #app-navigation ul li:hover{
+	background: #eee;	
+}
+
+.nav-sidebar #app-navigation ul li a{
+	padding: 0;
+	text-decoration: none; 
+}
+
+.nav-sidebar li.head {
+		cursor: pointer;
+}
+
+.nav-sidebar li#tags {
+		margin-top: 10px;;
+}
+
+.nav-sidebar li#apps {
+		margin-top: 10px;;
 }
 
 .nav-sidebar li i.icon {

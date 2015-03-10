@@ -18,21 +18,102 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.                                                    
  *                                                                                                                                  
  */  
+function createCookie(name,value,days) {
+		if (days) {
+				var date = new Date();
+				date.setTime(date.getTime()+(days*24*60*60*1000));
+				var expires = "; expires="+date.toGMTString();
+		}
+		else var expires = "";
+		document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name) {
+		var nameEQ = name + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0;i < ca.length;i++) {
+				var c = ca[i];
+				while (c.charAt(0)==' ') c = c.substring(1,c.length);
+				if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+		}
+		return null;
+}
+
+
 
 $(document).ready(function(){    
 
-    $('ul.nav-sidebar li[data-id="files_index"] > a img     ').replaceWith('<i class="icon-home      deic_green icon"></i>');
-    $('ul.nav-sidebar li[data-id="meta_data"] > a img       ').replaceWith('<i class="icon-tag       deic_green icon"></i>');
-    $('ul.nav-sidebar li[data-id="files_unsharing"] > a img ').replaceWith('<i class="icon-share     deic_green icon"></i>');
-    $('ul.nav-sidebar li[data-id="user_group_admin"] > a img').replaceWith('<i class="icon-users     deic_green icon"></i>');
-    $('ul.nav-sidebar li[data-id="gallery_index"] > a img   ').replaceWith('<i class="icon-camera    deic_green icon"></i>');
-    $('ul.nav-sidebar li[data-id="documents_index"] > a img ').replaceWith('<i class="icon-doc-text  deic_green icon"></i>');
-    $('ul.nav-sidebar li[data-id="importer_index"] > a img  ').replaceWith('<i class="icon-download  deic_green icon"></i>');
-    $('ul.nav-sidebar li[data-id="uploader"] > a img        ').replaceWith('<i class="icon-upload    deic_green icon"></i>');
-    $('ul.nav-sidebar li[data-id="activity"] > a img        ').replaceWith('<i class="icon-flash     deic_green icon"></i>');
-    $('ul.nav-sidebar li[data-id="calendar_index"] > a img  ').replaceWith('<i class="icon-calendar  deic_green icon"></i>');
-    $('ul.nav-sidebar li[data-id="contacts"] > a img        ').replaceWith('<i class="icon-chat      deic_green icon"></i>');
-    $('ul.nav-sidebar li#apps-management > a img            ').replaceWith('<i class="icon-plus      deic_grey  icon"></i>');
+		$('ul.nav-sidebar li[data-id="files_index"] > a img     ').replaceWith('<i class="icon-home      deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id^="internal_bookma"] > a img').replaceWith('<i class="icon-folder    deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="meta_data"] > a img       ').replaceWith('<i class="icon-tag       deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="files_unsharing"] > a img ').replaceWith('<i class="icon-share     deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="user_group_admin"] > a img').replaceWith('<i class="icon-users     deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="gallery_index"] > a img   ').replaceWith('<i class="icon-camera    deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="documents_index"] > a img ').replaceWith('<i class="icon-doc-text  deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="importer_index"] > a img  ').replaceWith('<i class="icon-download  deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="uploader"] > a img        ').replaceWith('<i class="icon-upload    deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="activity"] > a img        ').replaceWith('<i class="icon-flash     deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="calendar_index"] > a img  ').replaceWith('<i class="icon-calendar  deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="contacts"] > a img        ').replaceWith('<i class="icon-chat      deic_green icon"></i>');
+		$('ul.nav-sidebar li#apps-management > a img            ').replaceWith('<i class="icon-plus      deic_grey  icon"></i>');
+
+		$('ul.nav-sidebar li[data-id="files_index"] > a span    ').replaceWith('<span>Home</span>');
+
+
+		$('ul.nav-sidebar li[data-id="files_index"]').before("<li id='places' class='head' style='min-width:160px;'><span >Places</span><span style='float:right'><i class='icon-angle-down'></i><i class='icon-angle-right hidden'></i></span></li>");
+		$('ul.nav-sidebar li[data-id="meta_data"]').before("<li id='tags' class='head'><span>Tags</span><span style='float:right'><i class='icon-angle-down'></i><i class='icon-angle-right hidden'></i></span></li><li id='apps' class='head'><span>Apps</span><span style='float:right'><i class='icon-angle-down'></i><i class='icon-angle-right hidden'></i></span></li>");
+
+
+		var places = readCookie('OCplaces');
+		var tags   = readCookie('OCtags');
+		var apps   = readCookie('OCapps');
+
+		if(places == 'collapsed'){
+				$('ul.nav-sidebar li[data-id^="internal_bookmarks"], li[data-id="files_index"]').hide();
+				$('ul.nav-sidebar li#places span i').toggleClass('hidden');
+		}
+		if(tags == 'collapsed'){
+				$('ul.nav-sidebar li[data-id^="tag-"]').hide();
+				$('ul.nav-sidebar li#tags span i').toggleClass('hidden');
+		}
+		if(apps == 'collapsed'){
+				$('ul.nav-sidebar li').not('.head, [data-id^="tag-"], [data-id^="internal-bookmarks"], [data-id="files_index"]').hide();
+				$('ul.nav-sidebar li#apps span i').toggleClass('hidden');
+		}
+
+
+		$('ul.nav-sidebar').show();
+
+		$('ul.nav-sidebar').on('click','li#places', function() {
+				$('ul.nav-sidebar li[data-id^="internal-bookmarks"], li[data-id="files_index"]').toggle('slow','linear');
+				$('ul.nav-sidebar li#places span i').toggleClass('hidden');
+				if($('ul.nav-sidebar li#places span i.icon-angle-down').is(":visible")){
+					createCookie('OCplaces','expanded','365');
+				} else {
+					createCookie('OCplaces','collapsed','365');
+				}
+		});
+
+		$('ul.nav-sidebar').on('click','li#tags', function() {
+				$('ul.nav-sidebar li[data-id^="tag-"]').toggle('slow','linear');
+				$('ul.nav-sidebar li#tags span i').toggleClass('hidden');
+				if($('ul.nav-sidebar li#tags span i.icon-angle-down').is(":visible")){
+					createCookie('OCtags','expanded','365');
+				} else {
+					createCookie('OCtags','collapsed','365');
+				}
+		});
+
+		$('ul.nav-sidebar').on('click','li#apps', function() {
+				$('ul.nav-sidebar li').not('.head, [data-id^="tag-"], [data-id^="internal-bookmarks"], [data-id="files_index"]').toggle('slow','linear');
+				$('ul.nav-sidebar li#apps span i').toggleClass('hidden');
+				if($('ul.nav-sidebar li#apps span i.icon-angle-down').is(":visible")){
+					createCookie('OCapps','expanded','365');
+				} else {
+					createCookie('OCapps','collapsed','365');
+				}
+		});
+
 
 
 });
