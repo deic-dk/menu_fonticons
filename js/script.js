@@ -58,7 +58,7 @@ $(document).ready(function(){
 		$('ul.nav-sidebar li#apps-management > a img            ').replaceWith('<i class="icon-plus      deic_grey  icon"></i>');
 
 		$('ul.nav-sidebar li[data-id="files_index"] > a span    ').replaceWith('<span>Home</span>');
-
+		$('ul.nav-sidebar li[data-id="files_index"]').after('<li data-id="trash"><a title="" href="#"><i class="icon-trash deic_green icon"></i><div class="icon-loading-dark" style="display:none;"></div><span>Trashbin</span></a></li>'); 
 
 		$('ul.nav-sidebar li[data-id="files_index"]').before("<li id='places' class='head' style='min-width:160px;'><span >Places</span><span style='float:right'><i class='icon-angle-down'></i><i class='icon-angle-right hidden'></i></span></li>");
 		$('ul.nav-sidebar li[data-id="meta_data"]').before("<li id='tags' class='head'><span>Tags</span><span style='float:right'><i class='icon-angle-down'></i><i class='icon-angle-right hidden'></i></span></li><li id='apps' class='head'><span>Apps</span><span style='float:right'><i class='icon-angle-down'></i><i class='icon-angle-right hidden'></i></span></li>");
@@ -69,7 +69,7 @@ $(document).ready(function(){
 		var apps   = readCookie('OCapps');
 
 		if(places == 'collapsed'){
-				$('ul.nav-sidebar li[data-id^="internal_bookmarks"], li[data-id="files_index"]').hide();
+				$('ul.nav-sidebar li[data-id^="internal_bookmarks"], li[data-id="files_index"], li[data-id="trash"]').hide();
 				$('ul.nav-sidebar li#places span i').toggleClass('hidden');
 		}
 		if(tags == 'collapsed'){
@@ -77,7 +77,7 @@ $(document).ready(function(){
 				$('ul.nav-sidebar li#tags span i').toggleClass('hidden');
 		}
 		if(apps == 'collapsed'){
-				$('ul.nav-sidebar li').not('.head, [data-id^="tag-"], [data-id^="internal-bookmarks"], [data-id="files_index"]').hide();
+				$('ul.nav-sidebar li').not('.head, [data-id^="tag-"], [data-id^="internal-bookmarks"], [data-id="files_index"], [data-id="trash"]').hide();
 				$('ul.nav-sidebar li#apps span i').toggleClass('hidden');
 		}
 
@@ -85,7 +85,7 @@ $(document).ready(function(){
 		$('ul.nav-sidebar').show();
 
 		$('ul.nav-sidebar').on('click','li#places', function() {
-				$('ul.nav-sidebar li[data-id^="internal-bookmarks"], li[data-id="files_index"]').toggle('slow','linear');
+				$('ul.nav-sidebar li[data-id^="internal-bookmarks"], li[data-id="files_index"], li[data-id="trash"]').toggle('slow','linear');
 				$('ul.nav-sidebar li#places span i').toggleClass('hidden');
 				if($('ul.nav-sidebar li#places span i.icon-angle-down').is(":visible")){
 					createCookie('OCplaces','expanded','365');
@@ -105,7 +105,7 @@ $(document).ready(function(){
 		});
 
 		$('ul.nav-sidebar').on('click','li#apps', function() {
-				$('ul.nav-sidebar li').not('.head, [data-id^="tag-"], [data-id^="internal-bookmarks"], [data-id="files_index"]').toggle('slow','linear');
+				$('ul.nav-sidebar li').not('.head, [data-id^="tag-"], [data-id^="internal-bookmarks"], [data-id="files_index"], [data-id="trash"]').toggle('slow','linear');
 				$('ul.nav-sidebar li#apps span i').toggleClass('hidden');
 				if($('ul.nav-sidebar li#apps span i.icon-angle-down').is(":visible")){
 					createCookie('OCapps','expanded','365');
@@ -113,6 +113,19 @@ $(document).ready(function(){
 					createCookie('OCapps','collapsed','365');
 				}
 		});
+
+
+		$('ul.nav-sidebar').on('click', 'li[data-id="trash"]', function(e) {
+			    $('ul.nav-sidebar').find('.active').removeClass('active');	
+				$(this).children('a').addClass('active');
+				if($('#app-navigation').length !== 0){
+						$('#app-navigation ul li.nav-trashbin a').click();
+				} else {
+						window.location.href = "/index.php/apps/files?dir=%2F&view=trashbin";
+				}
+
+		});
+
 
 
 
