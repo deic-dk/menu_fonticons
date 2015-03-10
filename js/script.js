@@ -85,7 +85,7 @@ $(document).ready(function(){
 		$('ul.nav-sidebar').show();
 
 		$('ul.nav-sidebar').on('click','li#places', function() {
-				$('ul.nav-sidebar li[data-id^="internal-bookmarks"], li[data-id="files_index"], li[data-id="trash"]').toggle('slow','linear');
+				$('ul.nav-sidebar li[data-id^="internal-bookmarks"], li[data-id="files_index"], li[data-id="trash"]').toggle('fast','linear');
 				$('ul.nav-sidebar li#places span i').toggleClass('hidden');
 				if($('ul.nav-sidebar li#places span i.icon-angle-down').is(":visible")){
 					createCookie('OCplaces','expanded','365');
@@ -95,7 +95,7 @@ $(document).ready(function(){
 		});
 
 		$('ul.nav-sidebar').on('click','li#tags', function() {
-				$('ul.nav-sidebar li[data-id^="tag-"]').toggle('slow','linear');
+				$('ul.nav-sidebar li[data-id^="tag-"]').toggle('fast','linear');
 				$('ul.nav-sidebar li#tags span i').toggleClass('hidden');
 				if($('ul.nav-sidebar li#tags span i.icon-angle-down').is(":visible")){
 					createCookie('OCtags','expanded','365');
@@ -105,7 +105,7 @@ $(document).ready(function(){
 		});
 
 		$('ul.nav-sidebar').on('click','li#apps', function() {
-				$('ul.nav-sidebar li').not('.head, [data-id^="tag-"], [data-id^="internal-bookmarks"], [data-id="files_index"], [data-id="trash"]').toggle('slow','linear');
+				$('ul.nav-sidebar li').not('.head, [data-id^="tag-"], [data-id^="internal-bookmarks"], [data-id="files_index"], [data-id="trash"]').toggle('fast','linear');
 				$('ul.nav-sidebar li#apps span i').toggleClass('hidden');
 				if($('ul.nav-sidebar li#apps span i.icon-angle-down').is(":visible")){
 					createCookie('OCapps','expanded','365');
