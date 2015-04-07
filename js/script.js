@@ -68,7 +68,7 @@ $(document).ready(function(){
 														   +'<a title="" href="#"><i class="icon-share deic_green icon"></i><div class="icon-loading-dark" style="display:none;"></div><span>Shared by me</span></a>'
 														   +'</li>'
 														   +'<li data-id="sharing_in">'
-														   +'<a title="" href="#"><i class="icon-share deic_green icon"></i><div class="icon-loading-dark" style="display:none;"></div><span>Shared by others</span></a>'
+														   +'<a title="" href="#"><i class="icon-share deic_green icon"></i><div class="icon-loading-dark" style="display:none;"></div><span>Shared with me</span></a>'
 														   +'</li>'
 														   +'<li data-id="trash">'
 														   +'<a title="" href="#"><i class="icon-trash deic_green icon"></i><div class="icon-loading-dark" style="display:none;"></div><span>Trashbin</span></a>'
