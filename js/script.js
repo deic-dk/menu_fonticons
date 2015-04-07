@@ -95,7 +95,7 @@ $(document).ready(function(){
 				$('ul.nav-sidebar li#tags span i').toggleClass('hidden');
 		}
 		if(apps == 'collapsed'){
-				$('ul.nav-sidebar li').not('.head, [data-id^="tag-"], [data-id^="internal-bookmarks"], [data-id="files_index"], [data-id="trash"]').hide();
+				$('ul.nav-sidebar li').not('.head, [data-id^="tag-"], [data-id^="internal-bookmarks"], [data-id="files_index"], [data-id="trash"], [data-id^="sharing_"]').hide();
 				$('ul.nav-sidebar li#apps span i').toggleClass('hidden');
 		}
 
@@ -127,7 +127,7 @@ $(document).ready(function(){
 		});
 
 		$('ul.nav-sidebar').on('click','li#apps', function() {
-				$('ul.nav-sidebar li').not('.head, [data-id^="tag-"], [data-id^="internal-bookmarks"], [data-id="files_index"], [data-id="trash"]').toggle('fast','linear');
+				$('ul.nav-sidebar li').not('.head, [data-id^="tag-"], [data-id^="internal-bookmarks"], [data-id="files_index"], [data-id="trash"], [data-id^="sharing_"]').toggle('fast','linear');
 				$('ul.nav-sidebar li#apps span i').toggleClass('hidden');
 				if($('ul.nav-sidebar li#apps span i.icon-angle-down').is(":visible")){
 					createCookie('OCapps','expanded','365');
