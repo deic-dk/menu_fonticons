@@ -63,8 +63,13 @@ $(document).ready(function(){
 		/* Replace "Files" with "Home" */
 		$('ul.nav-sidebar li[data-id="files_index"] > a span    ').replaceWith('<span>Home</span>');
 		
+		/* Insert menu headings: Places, Tags, and Apps */
+		$('ul.nav-sidebar li[data-id="files_index"]').before("<li id='places' class='head' style='min-width:160px;'><span >Places</span><span style='float:right'><i class='icon-angle-down'></i><i class='icon-angle-right hidden'></i></span></li>");
+		$('ul.nav-sidebar li[data-id="meta_data"]  ').before("<li id='tags'   class='head'><span>Tags</span><span style='float:right'><i class='icon-angle-down'></i><i class='icon-angle-right hidden'></i></span></li><li id='apps' class='head'><span>Apps</span><span style='float:right'><i class='icon-angle-down'></i><i class='icon-angle-right hidden'></i></span></li>");
+
+
 		/* Insert link to Trashbin and shared files */
-		$('ul.nav-sidebar li[data-id="files_index"]').after('<li data-id="sharing_out">'
+		$('ul.nav-sidebar li#tags').before('<li data-id="sharing_out">'
 														   +'<a title="" href="#"><i class="icon-share deic_green icon"></i><div class="icon-loading-dark" style="display:none;"></div><span>Shared by me</span></a>'
 														   +'</li>'
 														   +'<li data-id="sharing_in">'
@@ -74,10 +79,6 @@ $(document).ready(function(){
 														   +'<a title="" href="#"><i class="icon-trash deic_green icon"></i><div class="icon-loading-dark" style="display:none;"></div><span>Trashbin</span></a>'
 														   +'</li>');
 
-
-		/* Insert menu headings: Places, Tags, and Apps */
-		$('ul.nav-sidebar li[data-id="files_index"]').before("<li id='places' class='head' style='min-width:160px;'><span >Places</span><span style='float:right'><i class='icon-angle-down'></i><i class='icon-angle-right hidden'></i></span></li>");
-		$('ul.nav-sidebar li[data-id="meta_data"]  ').before("<li id='tags'   class='head'><span>Tags</span><span style='float:right'><i class='icon-angle-down'></i><i class='icon-angle-right hidden'></i></span></li><li id='apps' class='head'><span>Apps</span><span style='float:right'><i class='icon-angle-down'></i><i class='icon-angle-right hidden'></i></span></li>");
 
 
 
