@@ -57,12 +57,16 @@ $(document).ready(function(){
 		$('ul.nav-sidebar li[data-id="calendar_index"]   > a img').replaceWith('<i class="icon-calendar  deic_green icon"></i>');
 		$('ul.nav-sidebar li[data-id="contacts"]         > a img').replaceWith('<i class="icon-chat      deic_green icon"></i>');
 		$('ul.nav-sidebar li[data-id="adaptivefiles"]    > a img').replaceWith('<i class="icon-cubes	 deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="responsivefiles"]   > a img').replaceWith('<i class="icon-cube 	 deic_green icon"></i>');
 		$('ul.nav-sidebar li#apps-management             > a img').replaceWith('<i class="icon-plus      deic_grey  icon"></i>');
 
 
 		/* Replace "Files" with "Home" */
 		$('ul.nav-sidebar li[data-id="files_index"] > a span    ').replaceWith('<span>Home</span>');
-		
+
+		/* Hide activity app */
+		$('li[data-id=activity]').hide();
+
 		/* Insert menu headings: Places, Tags, and Apps */
 		$('ul.nav-sidebar li[data-id="files_index"]').before("<li id='places' class='head' style='min-width:160px;'><span >Places</span><span style='float:right'><i class='icon-angle-down'></i><i class='icon-angle-right hidden'></i></span></li>");
 		$('ul.nav-sidebar li[data-id="meta_data"]  ').before("<li id='tags'   class='head'><span>Tags</span><span style='float:right'><i class='icon-angle-down'></i><i class='icon-angle-right hidden'></i></span></li><li id='apps' class='head'><span>Apps</span><span style='float:right'><i class='icon-angle-down'></i><i class='icon-angle-right hidden'></i></span></li>");
@@ -103,7 +107,7 @@ $(document).ready(function(){
 
 		$('ul.nav-sidebar').show();
 
-		
+
 
 		/* Attach click event handlers */
 
