@@ -20,6 +20,7 @@ ul.nav-sidebar {
 
 .nav-sidebar > li:not(.head) {
 	margin-left: 20px;
+	height: 31px;
 }
 
 
