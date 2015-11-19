@@ -19,7 +19,7 @@ ul.nav-sidebar {
 
 
 .nav-sidebar > li:not(.head) {
-	margin-left: 20px;
+	/*margin-left: 20px;*/
 	height: 31px;
 }
 
@@ -36,12 +36,12 @@ ul.nav-sidebar {
 }
 
 .nav-sidebar #app-navigation ul li:hover{
-	background: #eee;	
+	background: #eee;
 }
 
 .nav-sidebar #app-navigation ul li a{
 	padding: 0;
-	text-decoration: none; 
+	text-decoration: none;
 }
 
 .nav-sidebar li.head {
@@ -49,11 +49,11 @@ ul.nav-sidebar {
 }
 
 .nav-sidebar li#tags {
-		margin-top: 10px;;
+		margin-top: 10px;
 }
 
 .nav-sidebar li#apps {
-		margin-top: 10px;;
+		margin-top: 10px;
 }
 
 .nav-sidebar li i.icon {
