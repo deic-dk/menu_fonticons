@@ -47,7 +47,7 @@ $(document).ready(function(){
 		$('ul.nav-sidebar li[data-id="files_index"]      > a img').replaceWith('<i class="icon-home      deic_green icon"></i>');
 		$('ul.nav-sidebar li[data-id^="internal-bookma"] > a img').replaceWith('<i class="icon-folder    deic_green icon"></i>');
 		$('ul.nav-sidebar li[data-id="meta_data"]        > a img').replaceWith('<i class="icon-tag       deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="files_unsharing"]  > a img').replaceWith('<i class="icon-shared    deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="files_unsharing"]  > a img').replaceWith('<i class="icon-share    deic_green icon"></i>');
 		$('ul.nav-sidebar li[data-id="user_group_admin"] > a img').replaceWith('<i class="icon-users     deic_green icon"></i>');
 		$('ul.nav-sidebar li[data-id="gallery_index"]    > a img').replaceWith('<i class="icon-camera    deic_green icon"></i>');
 		$('ul.nav-sidebar li[data-id="documents_index"]  > a img').replaceWith('<i class="icon-doc-text  deic_green icon"></i>');
@@ -74,10 +74,10 @@ $(document).ready(function(){
 
 		/* Insert link to Trashbin and shared files */
 		$('ul.nav-sidebar li#tags').before('<li data-id="sharing_out">'
-														   +'<a title="" href="#"><i class="icon-shared deic_green icon"></i><div class="icon-loading-dark" style="display:none;"></div><span>Shared by me</span></a>'
+														   +'<a title="" href="#"><i class="icon-share deic_green icon"></i><div class="icon-loading-dark" style="display:none;"></div><span>Shared by me</span></a>'
 														   +'</li>'
 														   +'<li data-id="sharing_in">'
-														   +'<a title="" href="#"><i class="icon-shared deic_green icon invert-image"></i><div class="icon-loading-dark" style="display:none;"></div><span>Shared with me</span></a>'
+														   +'<a title="" href="#"><i class="icon-share deic_green icon invert-image"></i><div class="icon-loading-dark" style="display:none;"></div><span>Shared with me</span></a>'
 														   +'</li>'
 														   +'<li data-id="trash">'
 														   +'<a title="" href="#"><i class="icon-trash deic_green icon"></i><div class="icon-loading-dark" style="display:none;"></div><span>Trashbin</span></a>'
