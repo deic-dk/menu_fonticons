@@ -111,7 +111,7 @@ $(document).ready(function(){
 		/* Attach click event handlers */
 
 		$('ul.nav-sidebar').on('click','li#places', function() {
-				$('ul.nav-sidebar li[data-id^="internal-bookmarks"], li[data-id="files_index"], li[data-id="trash"], li[data-id^="sharing_"] ').toggle('fast','linear');
+				$('ul.nav-sidebar li[data-id^="internal-bookmarks"], li[data-id="files_index"], li[data-id="trash"], li[data-id^="sharing_"], li[data-id^="user-groups_"] ').toggle('fast','linear');
 				$('ul.nav-sidebar li#places span i').toggleClass('hidden');
 				if($('ul.nav-sidebar li#places span i.icon-angle-down').is(":visible")){
 					createCookie('OCplaces','expanded','365');
