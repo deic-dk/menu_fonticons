@@ -44,21 +44,22 @@ function readCookie(name) {
 $(document).ready(function(){
 
   		/* Change SVG icons into font-awesome icons */
-		$('ul.nav-sidebar li[data-id="files_index"]      > a img').replaceWith('<i class="icon-home      deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="files_index"] > a img').replaceWith('<i class="icon-home      deic_green icon"></i>');
 		$('ul.nav-sidebar li[data-id^="internal-bookma"] > a img').replaceWith('<i class="icon-folder    deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="meta_data"]        > a img').replaceWith('<i class="icon-tag       deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="files_unsharing"]  > a img').replaceWith('<i class="icon-share    deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="meta_data"] > a img').replaceWith('<i class="icon-tag       deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="files_unsharing"] > a img').replaceWith('<i class="icon-share    deic_green icon"></i>');
 		$('ul.nav-sidebar li[data-id="user_group_admin"] > a img').replaceWith('<i class="icon-users     deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="gallery_index"]    > a img').replaceWith('<i class="icon-camera    deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="documents_index"]  > a img').replaceWith('<i class="icon-doc-text  deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="importer_index"]   > a img').replaceWith('<i class="icon-download  deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="uploader"]         > a img').replaceWith('<i class="icon-upload    deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="activity"]         > a img').replaceWith('<i class="icon-flash     deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="calendar_index"]   > a img').replaceWith('<i class="icon-calendar  deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="contacts"]         > a img').replaceWith('<i class="icon-chat      deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="adaptivefiles"]    > a img').replaceWith('<i class="icon-cubes	 deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="responsivefiles"]  > a img').replaceWith('<i class="icon-cube 	 deic_green icon"></i>');
-		$('ul.nav-sidebar li#apps-management             > a img').replaceWith('<i class="icon-plus      deic_grey  icon"></i>');
+		$('ul.nav-sidebar li[data-id="gallery_index"] > a img').replaceWith('<i class="icon-camera    deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="documents_index"] > a img').replaceWith('<i class="icon-doc-text  deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="importer_index"] > a img').replaceWith('<i class="icon-download  deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="uploader"] > a img').replaceWith('<i class="icon-upload    deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="activity"] > a img').replaceWith('<i class="icon-flash     deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="calendar_index"] > a img').replaceWith('<i class="icon-calendar  deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="contacts"] > a img').replaceWith('<i class="icon-chat      deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="adaptivefiles"] > a img').replaceWith('<i class="icon-cubes	 deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="responsivefiles"] > a img').replaceWith('<i class="icon-cube 	 deic_green icon"></i>');
+		$('ul.nav-sidebar li#apps-management > a img').replaceWith('<i class="icon-plus      deic_grey  icon"></i>');
+		$('ul.nav-sidebar li[data-id="notes"] > a img').replaceWith('<i class="icon-pencil deic_green icon"></i>');
 
 
 		/* Replace "Files" with "Home" */
