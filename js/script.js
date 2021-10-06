@@ -94,7 +94,7 @@ $(document).ready(function(){
 		var apps   = readCookie('OCapps');
 
 		if(places == 'collapsed'){
-				$('ul.nav-sidebar li[data-id^="internal-bookmarks"], li[data-id="files_index"], li[data-id="trash"], li[data-id^="sharing_"], li[data-id^="user-groups_"], li[data-id^="owned-group-folders_"], li[data-id^="gallery"]').hide();
+				$('ul.nav-sidebar li[data-id^="internal-bookmarks"], li[data-id="files_index"], li[data-id="trash"], li[data-id^="sharing_"], li[data-id^="user-groups_"], li[data-id^="owned-group-folders_"]').hide();
 				$('ul.nav-sidebar li#places span i').toggleClass('hidden');
 		}
 		if(tags == 'collapsed'){
