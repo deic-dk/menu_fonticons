@@ -150,36 +150,29 @@ $(document).ready(function(){
 						$('#content.app-activity').length===0/*The activity app uses #app-navigation for its own puposes and the links on the side bar don't work.*/){
 						$('#app-navigation ul li.nav-trashbin a').click();
 				} else {
-						window.location.href = "/index.php/apps/files?dir=%2F&view=trashbin";
+						window.location.href = OC.webroot+"/index.php/apps/files?dir=%2F&view=trashbin";
 				}
-
 		});
 
 		$('ul.nav-sidebar').on('click', 'li[data-id="sharing_in"]', function(e) {
-			    $('ul.nav-sidebar').find('.active').removeClass('active');
+				$('ul.nav-sidebar').find('.active').removeClass('active');
 				$(this).children('a').addClass('active');
 				if($('#app-navigation').length !== 0 &&
 						$('#content.app-activity').length===0){
 						$('#app-navigation ul li.nav-sharingin a').click();
 				} else {
-						window.location.href = "/index.php/apps/files?dir=%2F&view=sharingin";
+						window.location.href = OC.webroot+"/index.php/apps/files?dir=%2F&view=sharingin";
 				}
-
 		});
 
 		$('ul.nav-sidebar').on('click', 'li[data-id="sharing_out"]', function(e) {
-			    $('ul.nav-sidebar').find('.active').removeClass('active');
+				$('ul.nav-sidebar').find('.active').removeClass('active');
 				$(this).children('a').addClass('active');
 				if($('#app-navigation').length !== 0 &&
 						$('#content.app-activity').length===0){
 						$('#app-navigation ul li.nav-sharingout a').click();
 				} else {
-						window.location.href = "/index.php/apps/files?dir=%2F&view=sharingout";
+						window.location.href = OC.webroot+"/index.php/apps/files?dir=%2F&view=sharingout";
 				}
-
 		});
-
-
-
-
 });
