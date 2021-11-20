@@ -51,7 +51,7 @@ $(document).ready(function(){
 		$('ul.nav-sidebar li[data-id="user_group_admin"] > a img').replaceWith('<i class="icon-users     deic_green icon"></i>');
 		$('ul.nav-sidebar li[data-id="gallery_index"] > a img').replaceWith('<i class="icon-camera    deic_green icon"></i>');
 		$('ul.nav-sidebar li[data-id="documents_index"] > a img').replaceWith('<i class="icon-doc-text  deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="importer_index"] > a img').replaceWith('<i class="icon-download  deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="importer_index"] > a img').replaceWith('<i class="icon-download-cloud  deic_green icon"></i>');
 		$('ul.nav-sidebar li[data-id="uploader"] > a img').replaceWith('<i class="icon-upload    deic_green icon"></i>');
 		$('ul.nav-sidebar li[data-id="activity"] > a img').replaceWith('<i class="icon-flash     deic_green icon"></i>');
 		$('ul.nav-sidebar li[data-id="calendar_index"] > a img').replaceWith('<i class="icon-calendar  deic_green icon"></i>');
