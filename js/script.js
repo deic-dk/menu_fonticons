@@ -166,11 +166,19 @@ $(document).ready(function(){
 		});
 
 		$('ul.nav-sidebar').on('click', 'li[data-id="sharing_out"]', function(e) {
+			e.stopPropagation();
+			e.preventDefault();
 				$('ul.nav-sidebar').find('.active').removeClass('active');
 				$(this).children('a').addClass('active');
 				if($('#app-navigation').length !== 0 &&
 						$('#content.app-activity').length===0){
-						$('#app-navigation ul li.nav-sharingout a').click();
+						//$('#app-navigation ul li.nav-sharingout a').click();
+					OCA.Files.App.navigation.setActiveItem('sharingout', {silent: false});
+					/*params = {
+							view: 'sharingout',
+							dir: '/'
+						};
+					OCA.Files.App.navigation.getActiveContainer().trigger(new $.Event('urlChanged', params));*/
 				} else {
 						window.location.href = OC.webroot+"/index.php/apps/files?dir=%2F&view=sharingout";
 				}
