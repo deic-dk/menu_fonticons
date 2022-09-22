@@ -44,23 +44,24 @@ function readCookie(name) {
 $(document).ready(function(){
 
   		/* Change SVG icons into font-awesome icons */
-		$('ul.nav-sidebar li[data-id="files_index"] > a img').replaceWith('<i class="icon-home      deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id^="internal-bookma"] > a img').replaceWith('<i class="icon-folder    deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="meta_data"] > a img').replaceWith('<i class="icon-tag       deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="files_unsharing"] > a img').replaceWith('<i class="icon-share    deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="user_group_admin"] > a img').replaceWith('<i class="icon-users     deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="gallery_index"] > a img').replaceWith('<i class="icon-camera    deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="documents_index"] > a img').replaceWith('<i class="icon-doc-text  deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="importer_index"] > a img').replaceWith('<i class="icon-download-cloud  deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="uploader"] > a img').replaceWith('<i class="icon-upload    deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="activity"] > a img').replaceWith('<i class="icon-flash     deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="files_index"] > a img').replaceWith('<i class="icon-home deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id^="internal-bookma"] > a img').replaceWith('<i class="icon-folder deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="meta_data"] > a img').replaceWith('<i class="icon-tag deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="files_unsharing"] > a img').replaceWith('<i class="icon-share deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="user_group_admin"] > a img').replaceWith('<i class="icon-users deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="gallery_index"] > a img').replaceWith('<i class="icon-camera deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="documents_index"] > a img').replaceWith('<i class="icon-doc-text deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="importer_index"] > a img').replaceWith('<i class="icon-download-cloud deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="uploader"] > a img').replaceWith('<i class="icon-upload deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="activity"] > a img').replaceWith('<i class="icon-flash deic_green icon"></i>');
 		$('ul.nav-sidebar li[data-id="calendar_index"] > a img').replaceWith('<i class="icon-calendar  deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="contacts"] > a img').replaceWith('<i class="icon-chat      deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="contacts"] > a img').replaceWith('<i class="icon-chat deic_green icon"></i>');
 		$('ul.nav-sidebar li[data-id="adaptivefiles"] > a img').replaceWith('<i class="icon-cubes	 deic_green icon"></i>');
 		$('ul.nav-sidebar li[data-id="responsivefiles"] > a img').replaceWith('<i class="icon-cube 	 deic_green icon"></i>');
-		$('ul.nav-sidebar li#apps-management > a img').replaceWith('<i class="icon-plus      deic_grey  icon"></i>');
+		$('ul.nav-sidebar li#apps-management > a img').replaceWith('<i class="icon-plus deic_grey  icon"></i>');
 		$('ul.nav-sidebar li[data-id="notes"] > a img').replaceWith('<i class="icon-pencil deic_green icon"></i>');
 		$('ul.nav-sidebar li[data-id="user_pods"] > a img').replaceWith('<i class="icon-kubernetes deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="storage"] > a img').replaceWith('<i class="icon-briefcase deic_green icon"></i>');
 
 
 		/* Replace "Files" with "Home" */
@@ -94,7 +95,7 @@ $(document).ready(function(){
 		var apps   = readCookie('OCapps');
 
 		if(places == 'collapsed'){
-				$('ul.nav-sidebar li[data-id^="internal-bookmarks"], li[data-id="files_index"], li[data-id="trash"], li[data-id^="sharing_"], li[data-id^="user-groups_"], li[data-id^="owned-group-folders_"]').hide();
+				$('ul.nav-sidebar li[data-id^="internal-bookmarks"], li[data-id="files_index"], li[data-id="trash"], li[data-id^="sharing_"], li[data-id^="user-groups_"], li[data-id^="owned-group-folders_"], li[data-id="storage"]').hide();
 				$('ul.nav-sidebar li#places span i').toggleClass('hidden');
 		}
 		if(tags == 'collapsed'){
@@ -102,7 +103,7 @@ $(document).ready(function(){
 				$('ul.nav-sidebar li#tags span i').toggleClass('hidden');
 		}
 		if(apps == 'collapsed'){
-				$('ul.nav-sidebar li').not('.head, li[data-id^="tag-"], li[data-id^="internal-bookmarks"], li[data-id="files_index"], li[data-id="trash"], li[data-id^="user-groups_"], li[data-id^="sharing_"], li[data-id^="owned-group-folders_"], li[data-id^="gallery"]').hide();
+				$('ul.nav-sidebar li').not('.head, li[data-id^="tag-"], li[data-id^="internal-bookmarks"], li[data-id="files_index"], li[data-id="trash"], li[data-id^="user-groups_"], li[data-id^="sharing_"], li[data-id^="owned-group-folders_"], li[data-id^="gallery"], li[data-id="storage"]').hide();
 				$('ul.nav-sidebar li#apps span i').toggleClass('hidden');
 		}
 
@@ -113,7 +114,7 @@ $(document).ready(function(){
 		/* Attach click event handlers */
 
 		$('ul.nav-sidebar').on('click','li#places', function() {
-				$('ul.nav-sidebar li[data-id^="internal-bookmarks"], li[data-id="files_index"], li[data-id="trash"], li[data-id^="sharing_"], li[data-id^="user-groups_"], li[data-id^="owned-group-folders_"]').toggle('fast','linear');
+				$('ul.nav-sidebar li[data-id^="internal-bookmarks"], li[data-id="files_index"], li[data-id="trash"], li[data-id^="sharing_"], li[data-id^="user-groups_"], li[data-id^="owned-group-folders_"], li[data-id="storage"]').toggle('fast','linear');
 				$('ul.nav-sidebar li#places span i').toggleClass('hidden');
 				if($('ul.nav-sidebar li#places span i.icon-angle-down').is(":visible")){
 					createCookie('OCplaces','expanded','365');
@@ -133,7 +134,7 @@ $(document).ready(function(){
 		});
 
 		$('ul.nav-sidebar').on('click','li#apps', function() {
-				$('ul.nav-sidebar li').not('.head, [data-id^="tag-"], [data-id^="internal-bookmarks"], [data-id="files_index"], [data-id="trash"], [data-id^="sharing_"], li[data-id^="user-groups_"], li[data-id^="owned-group-folders_"]').toggle('fast','linear');
+				$('ul.nav-sidebar li').not('.head, [data-id^="tag-"], [data-id^="internal-bookmarks"], [data-id="files_index"], [data-id="trash"], [data-id^="sharing_"], li[data-id^="user-groups_"], li[data-id^="owned-group-folders_"], li[data-id="storage"]').toggle('fast','linear');
 				$('ul.nav-sidebar li#apps span i').toggleClass('hidden');
 				if($('ul.nav-sidebar li#apps span i.icon-angle-down').is(":visible")){
 					createCookie('OCapps','expanded','365');
