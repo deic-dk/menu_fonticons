@@ -61,7 +61,7 @@ $(document).ready(function(){
 		$('ul.nav-sidebar li#apps-management > a img').replaceWith('<i class="icon-plus deic_grey  icon"></i>');
 		$('ul.nav-sidebar li[data-id="notes"] > a img').replaceWith('<i class="icon-pencil deic_green icon"></i>');
 		$('ul.nav-sidebar li[data-id="user_pods"] > a img').replaceWith('<i class="icon-kubernetes deic_green icon"></i>');
-		$('ul.nav-sidebar li[data-id="storage"] > a img').replaceWith('<i class="icon-briefcase deic_green icon"></i>');
+		$('ul.nav-sidebar li[data-id="storage"] > a img').replaceWith('<i class="icon-hdd deic_green icon"></i>');
 
 
 		/* Replace "Files" with "Home" */
