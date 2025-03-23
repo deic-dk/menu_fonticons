@@ -95,16 +95,16 @@ $(document).ready(function(){
 		var apps   = readCookie('OCapps');
 
 		if(places == 'collapsed'){
-				$('ul.nav-sidebar li[data-id^="internal-bookmarks"], li[data-id="files_index"], li[data-id="trash"], li[data-id^="sharing_"], li[data-id^="user-groups_"], li[data-id^="owned-group-folders_"], li[data-id="storage"]').hide();
+			$('ul.nav-sidebar li[data-id^="internal-bookmarks"], li[data-id="files_index"], li[data-id="trash"], li[data-id^="sharing_"], li[data-id^="user-groups_"], li[data-id^="owned-group-folders_"], li[data-id="storage"]').hide();
 				$('ul.nav-sidebar li#places span i').toggleClass('hidden');
 		}
 		if(tags == 'collapsed'){
-				$('ul.nav-sidebar li[data-id^="tag-"]').hide();
-				$('ul.nav-sidebar li#tags span i').toggleClass('hidden');
+			$('ul.nav-sidebar li[data-id^="tag-"]').hide();
+			$('ul.nav-sidebar li#tags span i').toggleClass('hidden');
 		}
 		if(apps == 'collapsed'){
-				$('ul.nav-sidebar li').not('.head, li[data-id^="tag-"], li[data-id^="internal-bookmarks"], li[data-id="files_index"], li[data-id="trash"], li[data-id^="user-groups_"], li[data-id^="sharing_"], li[data-id^="owned-group-folders_"], li[data-id^="gallery"]').hide();
-				$('ul.nav-sidebar li#apps span i').toggleClass('hidden');
+			$('ul.nav-sidebar li').not('.head, li[data-id^="tag-"], li[data-id^="internal-bookmarks"], li[data-id="files_index"], li[data-id="trash"], li[data-id^="user-groups_"], li[data-id^="sharing_"], li[data-id^="owned-group-folders_"], li[data-id^="storage"]').hide();
+			$('ul.nav-sidebar li#apps span i').toggleClass('hidden');
 		}
 
 		$('ul.nav-sidebar').show();
@@ -134,7 +134,7 @@ $(document).ready(function(){
 		});
 
 		$('ul.nav-sidebar').on('click','li#apps', function() {
-				$('ul.nav-sidebar li').not('.head, [data-id^="tag-"], [data-id^="internal-bookmarks"], [data-id="files_index"], [data-id="trash"], [data-id^="sharing_"], li[data-id^="user-groups_"], li[data-id^="owned-group-folders_"]').toggle('fast','linear');
+				$('ul.nav-sidebar li').not('.head, [data-id^="tag-"], [data-id^="internal-bookmarks"], [data-id="files_index"], [data-id="trash"], [data-id^="sharing_"], li[data-id^="user-groups_"], li[data-id^="owned-group-folders_"], li[data-id="storage"]').toggle('fast','linear');
 				$('ul.nav-sidebar li#apps span i').toggleClass('hidden');
 				if($('ul.nav-sidebar li#apps span i.icon-angle-down').is(":visible")){
 					createCookie('OCapps','expanded','365');
